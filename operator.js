@@ -27,3 +27,4 @@ console.log(a > b && b >= 5);
 
 // verificar se b é par ou impar usando ternario
 resultado = b % 2 == 0 ? "Par" : "Impar";
+
