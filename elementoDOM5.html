@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exemplo DOM 5 - criando elemento no DOM</title>
+</head>
+<body>
+    
+    <ul id="lista">
+        <li>Produtos</li>
+
+    </ul>
+
+    <ul id="listatime">
+
+    </ul>
+
+</body>
+
+<script>
+    var elemento = document.createElement("div");
+    elemento.innerText = "Incluindo texto na div dinamica" ;
+    elemento.style.backgroundColor = "lightgray";
+    document.body.append(elemento);
+
+    var lista = document.getElementById("lista");
+    var li = document.createElement("li");
+    li.textContent = "Quem somos";
+    lista.appendChild(li);
+
+    times = ["Fluminense", "Flamengo", "Botafogo", "Vasco"];
+
+    var listaTimes = document.querySelector("ul#listatime");
+    for(i=0; i < times.length; i++){
+        //var time = times[i]
+        var listItem = document.createElement("li");
+        listItem.innerText = times[i];
+        listItem.style.border = "1px solid blue";
+        listaTimes.appendChild(listItem);
+    }
+
+
+</script>
+
+</html>
